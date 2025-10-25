@@ -1,14 +1,16 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "rewrites": [
+  "redirects": [
     {
       "source": "/react-calculator/(.*)",
-      "destination": "https://react-calculator-123.vercel.app/$1"
+      "destination": "https://react-calculator-123.vercel.app/$1",
+      "permanent": false
     },
     {
       "source": "/react-calculator",
-      "destination": "https://react-calculator-123.vercel.app"
+      "destination": "https://react-calculator-123.vercel.app",
+      "permanent": false
     }
   ]
 }
