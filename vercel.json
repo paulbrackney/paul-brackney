@@ -3,7 +3,7 @@
   "outputDirectory": "dist",
   "rewrites": [
     {
-      "source": "/react-calculator/",
+      "source": "/react-calculator/(.*)",
       "destination": "https://react-calculator-123.vercel.app"
     }
   ]
