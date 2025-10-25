@@ -4,7 +4,7 @@
   "rewrites": [
     {
       "source": "/react-calculator/(.*)",
-      "destination": "https://react-calculator-123.vercel.app"
+      "destination": "https://react-calculator-123.vercel.app/$1"
     }
   ]
 }
