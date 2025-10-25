@@ -14,7 +14,7 @@ function App() {
           <div className="project-card">
             <h3>React Calculator</h3>
             <p>A modern, responsive calculator built with React and TypeScript.</p>
-            <a href="/react-calculator/" className="project-link">
+            <a href="/react-calculator" className="project-link">
               Try the Calculator →
             </a>
           </div>
