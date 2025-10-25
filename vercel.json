@@ -1,4 +1,10 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "dist"
+  "outputDirectory": "dist",
+  "rewrites": [
+    {
+      "source": "/react-calculator/(.*)",
+      "destination": "https://react-calculator-123.vercel.app/$1"
+    }
+  ]
 }
