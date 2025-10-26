@@ -11,6 +11,26 @@
       "source": "/react-calculator",
       "destination": "https://calculator.brackney.dev",
       "permanent": false
+    },
+    {
+      "source": "/ian/(.*)",
+      "destination": "https://ian-ai.brackney.dev/$1",
+      "permanent": false
+    },
+    {
+      "source": "/ian",
+      "destination": "https://ian-ai.brackney.dev",
+      "permanent": false
+    },
+    {
+      "source": "/goatlogs/(.*)",
+      "destination": "https://goatlogs.brackney.dev/$1",
+      "permanent": false
+    },
+    {
+      "source": "/goatlogs",
+      "destination": "https://goatlogs.brackney.dev",
+      "permanent": false
     }
   ]
 }
