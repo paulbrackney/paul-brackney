@@ -37,11 +37,6 @@
   margin: 0;
 }
 
-.experience {
-  max-width: 1200px;
-  margin: 2rem auto 0;
-  padding: 0 2rem;
-}
 
 .experience-grid {
   display: grid;
@@ -205,13 +200,6 @@
   line-height: 1.5;
 }
 
-/* Education Section Styles */
-.education {
-  max-width: 1200px;
-  margin: 2rem auto 0;
-  padding: 0 2rem;
-}
-
 .education-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -258,8 +246,6 @@
 
 @media (max-width: 768px) {
   .hero,
-  .experience,
-  .education,
   .content {
     padding: 0 1rem;
   }

@@ -13,12 +13,12 @@
       "permanent": false
     },
     {
-      "source": "/ian/(.*)",
+      "source": "/ian-ai/(.*)",
       "destination": "https://ian-ai.brackney.dev/$1",
       "permanent": false
     },
     {
-      "source": "/ian",
+      "source": "/ian-ai",
       "destination": "https://ian-ai.brackney.dev",
       "permanent": false
     },

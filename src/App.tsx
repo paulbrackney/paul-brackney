@@ -17,80 +17,72 @@ function App() {
         </div>
       </header>
       
-      <section className="experience">
-        <h2>Experience</h2>
-        <div className="experience-grid">
-          <div className="experience-item">
-            <div className="experience-logo">
-              <img src="/tbb-logo.png" alt="TBB" />
-            </div>
-            <p className="experience-caption">Senior Software Developer</p>
-            <p className="experience-dates">Mar. 2025 - Present</p>
-          </div>
-          
-          <div className="experience-item">
-            <div className="experience-logo">
-              <img src="/paycom-logo.png" alt="Paycom" />
-            </div>
-            <p className="experience-caption">Software Developer</p>
-            <p className="experience-dates">Dec. 2022 - Dec. 2024</p>
-          </div>
-
-          <div className="experience-item">
-            <div className="experience-logo">
-              <img src="/paycom-logo.png" alt="Paycom" />
-            </div>
-            <p className="experience-caption">QA Analyst</p>
-            <p className="experience-dates">Aug. 2021 - Dec. 2022</p>
-          </div>
-        </div>
-      </section>
-      
-      <section className="education">
-        <h2>Education</h2>      
-        <div className="education-grid">
-          <div className="education-item">
-            <div className="education-logo">
-              <img src="/osu-logo.png" alt="Oklahoma State University" />
-            </div>
-            <p className="education-caption">B.S. in Computer Science</p>
-          </div>
-          
-          <div className="education-item">
-            <div className="education-logo">
-              <img src="/ou-logo.png" alt="University of Oklahoma" />
-            </div>
-            <p className="education-caption">B.S. in Mathematics</p>
-          </div>
-
-          <div className="education-item">
-            <div className="education-logo">
-              <img src="/cribl-university.svg" alt="Cribl University" />
-            </div>
-            <p className="education-caption">Cribl Certified User</p>
-          </div>
-        </div>
-      </section>
-      
       <main className="content">
+        <section className="experience">
+          <h2>Experience</h2>
+          <div className="experience-grid">
+            <div className="experience-item">
+              <div className="experience-logo">
+                <img src="/tbb-logo.png" alt="TBB" />
+              </div>
+              <p className="experience-caption">Senior Software Developer</p>
+              <p className="experience-dates">Mar. 2025 - Present</p>
+            </div>
+            
+            <div className="experience-item">
+              <div className="experience-logo">
+                <img src="/paycom-logo.png" alt="Paycom" />
+              </div>
+              <p className="experience-caption">Software Developer</p>
+              <p className="experience-dates">Dec. 2022 - Dec. 2024</p>
+            </div>
+
+            <div className="experience-item">
+              <div className="experience-logo">
+                <img src="/paycom-logo.png" alt="Paycom" />
+              </div>
+              <p className="experience-caption">QA Analyst</p>
+              <p className="experience-dates">Aug. 2021 - Dec. 2022</p>
+            </div>
+          </div>
+        </section>
+        
+        <section className="education">
+          <h2>Education</h2>      
+          <div className="education-grid">
+            <div className="education-item">
+              <div className="education-logo">
+                <img src="/osu-logo.png" alt="Oklahoma State University" />
+              </div>
+              <p className="education-caption">B.S. in Computer Science</p>
+            </div>
+            
+            <div className="education-item">
+              <div className="education-logo">
+                <img src="/ou-logo.png" alt="University of Oklahoma" />
+              </div>
+              <p className="education-caption">B.S. in Mathematics</p>
+            </div>
+ 
+            <div className="education-item">
+              <div className="education-logo">
+                <img src="/cribl-university.svg" alt="Cribl University" />
+              </div>
+              <p className="education-caption">Cribl Certified User</p>
+            </div>
+          </div>
+        </section>
+        
         <section className="projects">
           <h2>Projects</h2>
           <div className="projects-grid">
-            <a href="/react-calculator/" className="project-card">
-              <div className="project-logo">
-                <img src="/calculator-logo.svg" alt="Calculator" />
-              </div>
-              <p className="project-caption">React Calculator</p>
-              <p className="project-description">A modern, responsive calculator built with React and TypeScript.</p>
-            </a>
-            
-            <a href="/ian" className="project-card">
+            <a href="/ian-ai" className="project-card">
               <div className="project-logo">
                 <img src="/ian-ai-logo.WEBP" alt="Ian AI" />
               </div>
               <p className="project-caption">Ian AI</p>
               <p className="project-description">
-                A generative AI chatbot programmed to tell goat jokes and the history of Criblania.
+                Generative AI chatbot with a knack for telling goat jokes.
               </p>
             </a>
             
@@ -100,9 +92,18 @@ function App() {
               </div>
               <p className="project-caption">Goat Logs</p>
               <p className="project-description">
-                Data table with robust search and filtering, with information about recent
-                goat events.
+                Recent goat events visualized in a data table with robust search and filtering.
               </p>
+            </a>
+
+            <a href="/react-calculator" className="project-card">
+              <div className="project-logo">
+                <img src="/calculator-logo.svg" alt="Calculator" />
+              </div>
+              <p className="project-caption">React Calculator</p>
+              <p className="project-description">
+                Simple calculator built with React and TypeScript.
+                </p>
             </a>
           </div>
         </section>
