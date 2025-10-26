@@ -52,10 +52,10 @@ function App() {
               <p>Download my resume to learn more about my experience, skills, and qualifications.</p>
             </div>
             <div className="resume-actions">
-              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="resume-link view">
+              <a href="/Paul_Brackney_Resume.pdf" target="_blank" rel="noopener noreferrer" className="resume-link view">
                 📄 View Resume
               </a>
-              <a href="/resume.pdf" download="Paul_Brackney_Resume.pdf" className="resume-link download">
+              <a href="/Paul_Brackney_Resume.pdf" download="Paul_Brackney_Resume.pdf" className="resume-link download">
                 💾 Download PDF
               </a>
             </div>
