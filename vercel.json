@@ -4,12 +4,12 @@
   "redirects": [
     {
       "source": "/react-calculator/(.*)",
-      "destination": "https://paul-brackney-react-calculator.vercel.app/$1",
+      "destination": "https://calculator.brackney.dev/$1",
       "permanent": false
     },
     {
       "source": "/react-calculator",
-      "destination": "https://paul-brackney-react-calculator.vercel.app",
+      "destination": "https://calculator.brackney.dev",
       "permanent": false
     }
   ]
