@@ -164,7 +164,7 @@ function App() {
             <a href="mailto:brackney.dev@gmail.com" className="contact-link">brackney.dev@gmail.com</a>
           </p>
           <p className="contact-item">
-            <a href="tel:+4053236531" className="contact-link">(405)323-6531</a>
+            <a href="tel:+14053236531" className="contact-link">(405)323-6531</a>
           </p>
         </div>
         <p className="footer-text">
