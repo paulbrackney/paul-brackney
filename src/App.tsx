@@ -120,29 +120,29 @@ function App() {
         </section>
         
         <section className="photo-gallery">
-          <h2>Hobbies & Interests</h2>
+          <h2>Photo Gallery</h2>
           <div className="gallery-grid">
             <div className="photo-item">
-              <div className="photo-placeholder">
-                <span>📸</span>
+              <div className="photo-image">
+                <img src="/dodgers-game.HEIC" alt="Dodgers game at Dodger Stadium" />
               </div>
-              <p className="photo-caption">Sunset over the mountains during a hiking trip in Colorado</p>
+              <p className="photo-caption">Watched the San Francisco Giants play at Dodger Stadium in June</p>
             </div>
             
             <div className="photo-item">
-              <div className="photo-placeholder">
-                <span>🏔️</span>
+              <div className="photo-image">
+                <img src="/okra.HEIC" alt="Okra harvest" />
               </div>
-              <p className="photo-caption">Reaching the summit after a challenging climb</p>
+              <p className="photo-caption">Had a very successful okra harvest this summer</p>
             </div>
             
             <div className="photo-item">
-              <div className="photo-placeholder">
-                <span>🌊</span>
+              <div className="photo-image">
+                <img src="/santo.HEIC" alt="Santorini cat" />
               </div>
-              <p className="photo-caption">Coastal photography session capturing the waves</p>
+              <p className="photo-caption">Santorini, one of my two cats</p>
             </div>
-            
+            {/*
             <div className="photo-item">
               <div className="photo-placeholder">
                 <span>🏛️</span>
@@ -163,6 +163,7 @@ function App() {
               </div>
               <p className="photo-caption">Reading and learning about new technologies</p>
             </div>
+            */}
           </div>
         </section>
         
