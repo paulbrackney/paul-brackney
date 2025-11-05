@@ -23,6 +23,16 @@
       "permanent": false
     },
     {
+      "source": "/bamboo-ai/(.*)",
+      "destination": "https://bamboo-ai.brackney.dev/$1",
+      "permanent": false
+    },
+    {
+      "source": "/bamboo-ai",
+      "destination": "https://bamboo-ai.brackney.dev",
+      "permanent": false
+    },
+    {
       "source": "/goatlogs/(.*)",
       "destination": "https://goatlogs.brackney.dev/$1",
       "permanent": false

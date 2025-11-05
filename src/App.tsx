@@ -11,8 +11,9 @@ function App() {
             Welcome to my personal website! I deeply enjoy building products that create raving fans. I've also 
             found it's crucial to continue learning new things, and I'm passionate about helping others do the same.
             <br /> <br />
-            When I'm not coding, I recharge by spending time with family, playing a round of disc golf, 
-            watching my favorite sports teams, and occasionally travelling somewhere awesome.
+            When I'm not coding, I recharge by playing disc golf, 
+            watching sports, spending time with my amazing wife, 
+            or occasionally travelling somewhere awesome.
           </p>
         </div>
       </header>
@@ -76,6 +77,7 @@ function App() {
         <section className="projects">
           <h2>Projects</h2>
           <div className="projects-grid">
+            {/*}
             <a href="/ian-ai" className="project-card">
               <div className="project-logo">
                 <img src="/ian-ai-logo.WEBP" alt="Ian AI" />
@@ -85,14 +87,23 @@ function App() {
                 Generative AI chatbot with a knack for telling goat jokes.
               </p>
             </a>
-            
+            */}
+            <a href="/bamboo-ai" className="project-card">
+              <div className="project-logo">
+                <img src="/bamboo-ai-logo.png" alt="Bamboo AI" />
+              </div>
+              <p className="project-caption">Bamboo AI</p>
+              <p className="project-description">
+                Generative AI chatbot for Bamboo HR.
+              </p>
+            </a>
             <a href="/goatlogs" className="project-card">
               <div className="project-logo">
                 <img src="/goatlogs-logo.PNG" alt="Goatlogs" />
               </div>
               <p className="project-caption">Goat Logs</p>
               <p className="project-description">
-                Recent goat events visualized in a data table with robust search and filtering.
+                Data table with fake records, robust search and filtering.
               </p>
             </a>
 
