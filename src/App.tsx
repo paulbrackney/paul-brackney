@@ -78,16 +78,6 @@ function App() {
           <h2>Projects</h2>
           <div className="projects-grid">
             {/*}
-            <a href="/ian-ai" className="project-card">
-              <div className="project-logo">
-                <img src="/ian-ai-logo.WEBP" alt="Ian AI" />
-              </div>
-              <p className="project-caption">Ian AI</p>
-              <p className="project-description">
-                Generative AI chatbot with a knack for telling goat jokes.
-              </p>
-            </a>
-            */}
             <a href="/bamboo-ai" className="project-card">
               <div className="project-logo">
                 <img src="/bamboo-ai-logo.png" alt="Bamboo AI" />
@@ -95,6 +85,16 @@ function App() {
               <p className="project-caption">Bamboo AI</p>
               <p className="project-description">
                 Generative AI chatbot for Bamboo HR.
+              </p>
+            </a>
+            */}
+            <a href="/ian-ai" className="project-card">
+              <div className="project-logo">
+                <img src="/ian-ai-logo.WEBP" alt="Ian AI" />
+              </div>
+              <p className="project-caption">Ian AI</p>
+              <p className="project-description">
+                Generative AI chatbot with a knack for telling goat jokes.
               </p>
             </a>
             <a href="/goatlogs" className="project-card">
@@ -126,21 +126,21 @@ function App() {
               <div className="photo-image">
                 <img src="/dodgers-game.HEIC" alt="Dodgers game at Dodger Stadium" />
               </div>
-              <p className="photo-caption">Watched the San Francisco Giants play at Dodger Stadium in June</p>
+              <p className="photo-caption">Giants at Dodgers &#9918;</p>
             </div>
             
             <div className="photo-item">
               <div className="photo-image">
                 <img src="/okra.HEIC" alt="Okra harvest" />
               </div>
-              <p className="photo-caption">Had a very successful okra harvest this summer</p>
+              <p className="photo-caption">Summer gardening &#127806;</p>
             </div>
             
             <div className="photo-item">
               <div className="photo-image">
                 <img src="/santo.HEIC" alt="Santorini cat" />
               </div>
-              <p className="photo-caption">Santorini, one of my two cats</p>
+              <p className="photo-caption">My cat, Santo &#128062;</p>
             </div>
             {/*
             <div className="photo-item">
