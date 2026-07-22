@@ -166,11 +166,19 @@ function App() {
           <div className="portfolio-placeholder">
             <a
               href="https://restaurant.brackney.dev"
-              className="portfolio-slot portfolio-slot--link"
+              className="portfolio-card"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span>Restaurant Site</span>
+              <img
+                src="https://restaurant.brackney.dev/images/hero-main.jpg"
+                alt="Golden Lantern Kitchen website preview"
+                className="portfolio-card-image"
+              />
+              <div className="portfolio-card-caption">
+                <span className="portfolio-card-title">Golden Lantern Kitchen</span>
+                <span className="portfolio-card-label">Restaurant Site</span>
+              </div>
             </a>
             <div className="portfolio-slot">
               <span>Local Retail</span>
