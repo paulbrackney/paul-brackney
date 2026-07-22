@@ -1,46 +1,4 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "redirects": [
-    {
-      "source": "/react-calculator/(.*)",
-      "destination": "https://calculator.brackney.dev/$1",
-      "permanent": false
-    },
-    {
-      "source": "/react-calculator",
-      "destination": "https://calculator.brackney.dev",
-      "permanent": false
-    },
-    {
-      "source": "/ian-ai/(.*)",
-      "destination": "https://ian-ai.brackney.dev/$1",
-      "permanent": false
-    },
-    {
-      "source": "/ian-ai",
-      "destination": "https://ian-ai.brackney.dev",
-      "permanent": false
-    },
-    {
-      "source": "/bamboo-ai/(.*)",
-      "destination": "https://bamboo-ai.brackney.dev/$1",
-      "permanent": false
-    },
-    {
-      "source": "/bamboo-ai",
-      "destination": "https://bamboo-ai.brackney.dev",
-      "permanent": false
-    },
-    {
-      "source": "/goatlogs/(.*)",
-      "destination": "https://goatlogs.brackney.dev/$1",
-      "permanent": false
-    },
-    {
-      "source": "/goatlogs",
-      "destination": "https://goatlogs.brackney.dev",
-      "permanent": false
-    }
-  ]
+  "outputDirectory": "dist"
 }
