@@ -196,9 +196,22 @@ function App() {
                 <span className="portfolio-card-label">Lawn Care Site</span>
               </div>
             </a>
-            <div className="portfolio-slot">
-              <span>Service Business</span>
-            </div>
+            <a
+              href="https://welding.brackney.dev"
+              className="portfolio-card"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/portfolio/brackney-welding.jpg"
+                alt="Brackney Welding & Fabrication website preview"
+                className="portfolio-card-image"
+              />
+              <div className="portfolio-card-caption portfolio-card-caption--steel">
+                <span className="portfolio-card-title">Brackney Welding & Fabrication</span>
+                <span className="portfolio-card-label">Welding & Fabrication Site</span>
+              </div>
+            </a>
           </div>
         </section>
 

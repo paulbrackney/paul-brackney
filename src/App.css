@@ -354,6 +354,10 @@
   background: linear-gradient(transparent, rgba(13, 40, 24, 0.92));
 }
 
+.portfolio-card-caption--steel {
+  background: linear-gradient(transparent, rgba(15, 23, 42, 0.92));
+}
+
 .portfolio-card-title {
   display: block;
   font-family: var(--font-display);
