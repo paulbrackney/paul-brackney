@@ -180,9 +180,22 @@ function App() {
                 <span className="portfolio-card-label">Restaurant Site</span>
               </div>
             </a>
-            <div className="portfolio-slot">
-              <span>Local Retail</span>
-            </div>
+            <a
+              href="https://lawncare.brackney.dev"
+              className="portfolio-card"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/portfolio/greenedge-lawn.jpg"
+                alt="GreenEdge Lawn & Landscape website preview"
+                className="portfolio-card-image"
+              />
+              <div className="portfolio-card-caption portfolio-card-caption--green">
+                <span className="portfolio-card-title">GreenEdge Lawn & Landscape</span>
+                <span className="portfolio-card-label">Lawn Care Site</span>
+              </div>
+            </a>
             <div className="portfolio-slot">
               <span>Service Business</span>
             </div>

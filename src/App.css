@@ -350,6 +350,10 @@
   color: #fff;
 }
 
+.portfolio-card-caption--green {
+  background: linear-gradient(transparent, rgba(13, 40, 24, 0.92));
+}
+
 .portfolio-card-title {
   display: block;
   font-family: var(--font-display);
