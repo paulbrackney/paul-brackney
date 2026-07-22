@@ -164,9 +164,14 @@ function App() {
             </p>
           </div>
           <div className="portfolio-placeholder">
-            <div className="portfolio-slot">
+            <a
+              href="https://restaurant.brackney.dev"
+              className="portfolio-slot portfolio-slot--link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <span>Restaurant Site</span>
-            </div>
+            </a>
             <div className="portfolio-slot">
               <span>Local Retail</span>
             </div>
