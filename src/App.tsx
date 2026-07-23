@@ -68,6 +68,37 @@ const clients = [
   },
 ]
 
+const portfolio = [
+  {
+    title: 'Golden Lantern Kitchen',
+    label: 'Restaurant',
+    badge: 'Demo site',
+    badgeVariant: 'demo',
+    href: 'https://restaurant.immaculatewebsolutions.com',
+    image: 'https://restaurant.immaculatewebsolutions.com/images/hero-main.jpg',
+    alt: 'Golden Lantern Kitchen demo website preview',
+    captionClass: '',
+  },
+  {
+    title: 'GreenEdge Lawn & Landscape',
+    label: 'Lawn Care',
+    badge: 'Demo site',
+    badgeVariant: 'demo',
+    href: 'https://lawncare.immaculatewebsolutions.com',
+    image: '/portfolio/greenedge-lawn.jpg',
+    alt: 'GreenEdge Lawn & Landscape demo website preview',
+    captionClass: 'portfolio-card-caption--green',
+  },
+  {
+    title: 'Brackney Welding & Fabrication',
+    label: 'Welding & Fabrication',
+    href: 'https://welding.immaculatewebsolutions.com',
+    image: '/portfolio/brackney-welding.jpg',
+    alt: 'Brackney Welding & Fabrication website preview',
+    captionClass: 'portfolio-card-caption--steel',
+  },
+]
+
 const steps = [
   { number: '01', title: 'Discovery', description: 'We learn about your business, goals, and the customers you want to reach.' },
   { number: '02', title: 'Build', description: 'We develop a fast, reliable site tailored to how your business actually operates.' },
@@ -223,61 +254,37 @@ function App() {
         <section id="work" className="section section-alt">
           <div className="section-header">
             <p className="section-eyebrow">Our Work</p>
-            <h2>Real sites for real local businesses</h2>
+            <h2>Websites built for local businesses</h2>
             <p className="section-lead">
-              Every project is tailored to the business behind it — from restaurants and retail
-              to trades and professional services.
+              Explore examples across restaurants, lawn care, and trades — each mobile-first,
+              easy to navigate, and designed to help customers take the next step.
             </p>
           </div>
           <div className="portfolio-placeholder">
-            <a
-              href="https://restaurant.immaculatewebsolutions.com"
-              className="portfolio-card"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://restaurant.immaculatewebsolutions.com/images/hero-main.jpg"
-                alt="Golden Lantern Kitchen website preview"
-                className="portfolio-card-image"
-              />
-              <div className="portfolio-card-caption">
-                <span className="portfolio-card-title">Golden Lantern Kitchen</span>
-                <span className="portfolio-card-label">Restaurant Site</span>
-              </div>
-            </a>
-            <a
-              href="https://lawncare.immaculatewebsolutions.com"
-              className="portfolio-card"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="/portfolio/greenedge-lawn.jpg"
-                alt="GreenEdge Lawn & Landscape website preview"
-                className="portfolio-card-image"
-              />
-              <div className="portfolio-card-caption portfolio-card-caption--green">
-                <span className="portfolio-card-title">GreenEdge Lawn & Landscape</span>
-                <span className="portfolio-card-label">Lawn Care Site</span>
-              </div>
-            </a>
-            <a
-              href="https://welding.immaculatewebsolutions.com"
-              className="portfolio-card"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="/portfolio/brackney-welding.jpg"
-                alt="Brackney Welding & Fabrication website preview"
-                className="portfolio-card-image"
-              />
-              <div className="portfolio-card-caption portfolio-card-caption--steel">
-                <span className="portfolio-card-title">Brackney Welding & Fabrication</span>
-                <span className="portfolio-card-label">Welding & Fabrication Site</span>
-              </div>
-            </a>
+            {portfolio.map((project) => (
+              <a
+                key={project.title}
+                href={project.href}
+                className="portfolio-card"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {project.badge ? (
+                  <span className={`portfolio-badge portfolio-badge--${project.badgeVariant}`}>
+                    {project.badge}
+                  </span>
+                ) : null}
+                <img
+                  src={project.image}
+                  alt={project.alt}
+                  className="portfolio-card-image"
+                />
+                <div className={`portfolio-card-caption ${project.captionClass}`.trim()}>
+                  <span className="portfolio-card-title">{project.title}</span>
+                  <span className="portfolio-card-label">{project.label}</span>
+                </div>
+              </a>
+            ))}
           </div>
         </section>
 
