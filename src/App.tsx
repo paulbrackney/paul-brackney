@@ -1,29 +1,51 @@
+import { useState } from 'react'
 import './App.css'
+import { Logo } from './components/Logo'
 
 const services = [
   {
     title: 'Custom Website Design',
     description:
       'Clean, mobile-friendly sites built around your brand — so customers find you online and know exactly what you offer.',
-    icon: '◆',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden="true">
+        <rect x="3" y="4" width="18" height="14" rx="2" />
+        <path d="M3 9h18M8 20h8" />
+      </svg>
+    ),
   },
   {
-    title: 'Menus & Online Presence',
-    description:
-      'Digital menus, hours, location maps, and reservation links — everything diners and shoppers need before they walk in.',
-    icon: '◇',
-  },
-  {
-    title: 'Search & Local Visibility',
+    title: 'Local Search Visibility',
     description:
       'Structured pages and local SEO basics so your business shows up when nearby customers search for what you do.',
-    icon: '◈',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden="true">
+        <circle cx="11" cy="11" r="7" />
+        <path d="M20 20l-3.5-3.5M11 8v6M8 11h6" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Menus, Booking & More',
+    description:
+      'Digital menus, service pages, contact forms, and maps — everything customers need before they walk in or call.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden="true">
+        <path d="M4 6h16M4 12h10M4 18h14" />
+        <circle cx="19" cy="18" r="3" />
+      </svg>
+    ),
   },
   {
     title: 'Ongoing Support',
     description:
-      'Updates when your menu changes, seasons shift, or you launch a promotion — without the hassle of doing it yourself.',
-    icon: '◉',
+      'Updates when your hours change, seasons shift, or you launch a promotion — without the hassle of doing it yourself.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" aria-hidden="true">
+        <path d="M12 3v3M12 18v3M3 12h3M18 12h3" />
+        <circle cx="12" cy="12" r="5" />
+      </svg>
+    ),
   },
 ]
 
@@ -37,8 +59,8 @@ const clients = [
     description: 'Showcase products, share your story, and make it easy for customers to visit or reach out.',
   },
   {
-    title: 'Professional Services',
-    description: 'Build trust with a polished site that explains what you do and how to get started.',
+    title: 'Trades & Services',
+    description: 'Build trust with a polished site that explains what you do, where you work, and how to get a quote.',
   },
   {
     title: 'Growing Local Businesses',
@@ -48,46 +70,90 @@ const clients = [
 
 const steps = [
   { number: '01', title: 'Discovery', description: 'We learn about your business, goals, and the customers you want to reach.' },
-  { number: '02', title: 'Design', description: 'You review layouts and content direction before anything gets built.' },
-  { number: '03', title: 'Build', description: 'We develop a fast, reliable site tailored to how your business actually operates.' },
+  { number: '02', title: 'Build', description: 'We develop a fast, reliable site tailored to how your business actually operates.' },
+  { number: '03', title: 'Review', description: 'You review the site and share feedback. We refine until you are happy with the result.' },
   { number: '04', title: 'Launch', description: 'We go live, verify everything works, and show you how to request updates.' },
 ]
 
+const highlights = [
+  { value: 'Mobile-first', label: 'Sites that look great on every phone and tablet' },
+  { value: 'Local focus', label: 'Built to help nearby customers find and choose you' },
+  { value: 'No jargon', label: 'Clear pricing conversations and straightforward process' },
+]
+
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  const closeMenu = () => setMenuOpen(false)
+
   return (
     <div className="site">
       <nav className="nav">
-        <a href="#" className="nav-logo">
-          Brackney<span className="nav-logo-accent">Web</span>
+        <a href="#" className="nav-logo" onClick={closeMenu}>
+          <Logo />
         </a>
-        <div className="nav-links">
-          <a href="#services">Services</a>
-          <a href="#process">Process</a>
-          <a href="#contact">Contact</a>
-          <a href="#contact" className="nav-cta">
+
+        <button
+          type="button"
+          className="nav-toggle"
+          aria-expanded={menuOpen}
+          aria-controls="site-menu"
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+
+        <div id="site-menu" className={`nav-links ${menuOpen ? 'nav-links--open' : ''}`}>
+          <a href="#services" onClick={closeMenu}>
+            Services
+          </a>
+          <a href="#work" onClick={closeMenu}>
+            Work
+          </a>
+          <a href="#process" onClick={closeMenu}>
+            Process
+          </a>
+          <a href="#contact" onClick={closeMenu}>
+            Contact
+          </a>
+          <a href="#contact" className="nav-cta" onClick={closeMenu}>
             Start a Project
           </a>
         </div>
       </nav>
 
       <header className="hero">
-        <p className="hero-eyebrow">Web development for local businesses</p>
+        <div className="hero-glow" aria-hidden="true" />
+        <p className="hero-eyebrow">Websites for local businesses</p>
         <h1>
-          Professional websites that help customers find you — and choose you.
+          Your business deserves a website that{' '}
+          <span className="hero-highlight">wins customers</span> — not one that holds you back.
         </h1>
         <p className="hero-lead">
-          We partner with restaurants and small businesses to build modern, easy-to-manage
-          websites that look great on every device and turn online visitors into real-world
-          customers.
+          Immaculate Web Solutions partners with small and medium-sized local businesses to build
+          modern, easy-to-manage websites that look professional on every device and turn online
+          visitors into real-world customers.
         </p>
         <div className="hero-actions">
           <a href="#contact" className="btn btn-primary">
-            Schedule a Conversation
+            Get a Free Consultation
           </a>
-          <a href="#services" className="btn btn-secondary">
-            See What We Offer
+          <a href="#work" className="btn btn-secondary">
+            See Our Work
           </a>
         </div>
+
+        <ul className="hero-highlights">
+          {highlights.map((item) => (
+            <li key={item.value}>
+              <strong>{item.value}</strong>
+              <span>{item.label}</span>
+            </li>
+          ))}
+        </ul>
       </header>
 
       <main>
@@ -96,7 +162,7 @@ function App() {
             <p className="section-eyebrow">Services</p>
             <h2>Everything you need to show up online with confidence</h2>
             <p className="section-lead">
-              No bloated packages or jargon. Just focused web work that helps your business
+              No bloated packages or tech jargon. Just focused web work that helps your business
               get found, look credible, and stay current.
             </p>
           </div>
@@ -118,8 +184,8 @@ function App() {
             <p className="section-eyebrow">Who We Work With</p>
             <h2>Built for businesses like yours</h2>
             <p className="section-lead">
-              Whether you run a neighborhood restaurant or a growing shop on Main Street,
-              we design sites that fit how you actually serve customers.
+              Whether you run a neighborhood restaurant, a shop on Main Street, or a growing
+              service company, we design sites that fit how you actually serve customers.
             </p>
           </div>
           <div className="card-grid card-grid--compact">
@@ -154,24 +220,24 @@ function App() {
           </ol>
         </section>
 
-        <section className="section section-alt">
+        <section id="work" className="section section-alt">
           <div className="section-header">
-            <p className="section-eyebrow">Work</p>
-            <h2>Client projects coming soon</h2>
+            <p className="section-eyebrow">Our Work</p>
+            <h2>Real sites for real local businesses</h2>
             <p className="section-lead">
-              We are actively building our portfolio with local businesses. Yours could
-              be the first featured here.
+              Every project is tailored to the business behind it — from restaurants and retail
+              to trades and professional services.
             </p>
           </div>
           <div className="portfolio-placeholder">
             <a
-              href="https://restaurant.brackney.dev"
+              href="https://restaurant.immaculatewebsolutions.com"
               className="portfolio-card"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img
-                src="https://restaurant.brackney.dev/images/hero-main.jpg"
+                src="https://restaurant.immaculatewebsolutions.com/images/hero-main.jpg"
                 alt="Golden Lantern Kitchen website preview"
                 className="portfolio-card-image"
               />
@@ -181,7 +247,7 @@ function App() {
               </div>
             </a>
             <a
-              href="https://lawncare.brackney.dev"
+              href="https://lawncare.immaculatewebsolutions.com"
               className="portfolio-card"
               target="_blank"
               rel="noopener noreferrer"
@@ -197,7 +263,7 @@ function App() {
               </div>
             </a>
             <a
-              href="https://welding.brackney.dev"
+              href="https://welding.immaculatewebsolutions.com"
               className="portfolio-card"
               target="_blank"
               rel="noopener noreferrer"
@@ -226,13 +292,13 @@ function App() {
               </p>
             </div>
             <div className="contact-details">
-              <a href="mailto:brackney.dev@gmail.com" className="contact-link">
-                brackney.dev@gmail.com
+              <a href="mailto:hello@immaculatewebsolutions.com" className="contact-link">
+                hello@immaculatewebsolutions.com
               </a>
               <a href="tel:+14053236531" className="contact-link">
                 (405) 323-6531
               </a>
-              <a href="mailto:brackney.dev@gmail.com?subject=Website%20Project%20Inquiry" className="btn btn-primary btn-full">
+              <a href="mailto:hello@immaculatewebsolutions.com?subject=Website%20Project%20Inquiry" className="btn btn-primary btn-full">
                 Email Us to Get Started
               </a>
             </div>
@@ -241,11 +307,11 @@ function App() {
       </main>
 
       <footer className="footer">
-        <p className="footer-brand">
-          Brackney<span className="nav-logo-accent">Web</span>
-        </p>
-        <p className="footer-tagline">Web development for restaurants and local businesses.</p>
-        <p className="footer-meta">&copy; {new Date().getFullYear()} Brackney Web. All rights reserved.</p>
+        <a href="#" className="footer-brand">
+          <Logo />
+        </a>
+        <p className="footer-tagline">Professional websites for small and medium-sized local businesses.</p>
+        <p className="footer-meta">&copy; {new Date().getFullYear()} Immaculate Web Solutions. All rights reserved.</p>
       </footer>
     </div>
   )
